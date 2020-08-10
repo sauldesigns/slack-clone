@@ -14,10 +14,11 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
 import db from '../services/firebase';
+import { useStateValue } from '../provider/StateProvider';
 
 function Sidebar() {
 	const [channels, setChannels] = useState([]);
-
+	const [{ user }] = useStateValue();
 	useEffect(() => {
 		db.collection('rooms').onSnapshot((snap) =>
 			setChannels(
@@ -35,7 +36,7 @@ function Sidebar() {
 					<h2>Slack Clone</h2>
 					<h3>
 						<FiberManualRecordIcon />
-						Saul Designs
+						{user?.displayName}
 					</h3>
 				</div>
 				<CreateIcon />
