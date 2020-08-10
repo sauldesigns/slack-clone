@@ -19,6 +19,7 @@
 
 .sidebarOption__channel {
 	padding: 10px 0;
+	text-transform: lowercase;
 }
 
 .sidebarOption__hash {

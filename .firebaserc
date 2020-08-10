@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "slack-clone-80825"
+  },
+  "targets": {
+    "mushare-a0cb8": {
+      "hosting": {
+        "slack": [
+          "slack-clone-80825"
+        ]
+      }
+    }
+  }
+}
